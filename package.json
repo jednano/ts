@@ -1,0 +1,62 @@
+{
+  "name": "typescript-guide",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A guide, showing off all of the features of TypeScript.",
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "tslint -p tsconfig.test.json",
+    "prebuild": "rimraf dist",
+    "build": "tsc",
+    "pretest": "rimraf ./coverage",
+    "test": "npm run lint && npm run jest",
+    "jest": "jest --coverage",
+    "prewatch": "npm run lint",
+    "watch": "jest --watch test.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "verbose": true,
+    "coverageDirectory": "coverage",
+    "coverageReporters": [
+      "lcov",
+      "text"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jedmao/typescript-guide.git"
+  },
+  "keywords": [
+    "typescript",
+    "node",
+    "javascript",
+    "tslint"
+  ],
+  "author": "Jed Mao <jedmao@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jedmao/typescript-guide/issues"
+  },
+  "homepage": "https://github.com/jedmao/typescript-guide#readme",
+  "devDependencies": {
+    "@jedmao/tsconfig": "^0.3.0",
+    "@jedmao/tslint": "^0.2.0",
+    "@types/jest": "^23.3.10",
+    "jest": "^23.6.0",
+    "rimraf": "^2.6.2",
+    "ts-jest": "^23.10.5",
+    "tslint": "^5.11.0",
+    "typescript": "^3.2.2"
+  }
+}

@@ -1,0 +1,7 @@
+node_modules/
+coverage/
+typescript-guide-*
+.travis.yml
+*.ts
+!*.d.ts
+ts*.json
