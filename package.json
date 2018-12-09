@@ -5,6 +5,8 @@
   "description": "A guide, showing off all of the features of TypeScript.",
   "main": "dist/index.js",
   "scripts": {
+    "clean": "rimraf coverage dist *.log* bem-join-*",
+    "codecov": "codecov -f coverage/lcov.info",
     "lint": "tslint -p tsconfig.test.json",
     "prebuild": "rimraf dist",
     "build": "tsc",
