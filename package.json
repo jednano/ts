@@ -10,12 +10,12 @@
     "lint": "tslint -p tsconfig.test.json",
     "prebuild": "rimraf dist",
     "build": "tsc",
-    "pretest": "rimraf ./coverage",
-    "test": "npm run lint && npm run jest",
-    "jest": "jest --coverage",
-    "prewatch": "npm run lint",
-    "watch": "jest --watch",
-    "prepublishOnly": "npm run build"
+    "precover": "rimraf coverage",
+    "cover": "jest --coverage",
+    "pretest": "npm run lint",
+    "test": "jest --watch",
+    "fix": "npm run lint -- --fix",
+    "prepublishOnly": "npm run lint && npm run cover && npm run build"
   },
   "jest": {
     "preset": "ts-jest",
@@ -33,7 +33,11 @@
         "lines": 100,
         "statements": 100
       }
-    }
+    },
+    "watchPlugins": [
+      "jest-watch-typeahead/filename",
+      "jest-watch-typeahead/testname"
+    ]
   },
   "repository": {
     "type": "git",
@@ -56,6 +60,7 @@
     "@jedmao/tslint": "^0.2.0",
     "@types/jest": "^23.3.10",
     "jest": "^23.6.0",
+    "jest-watch-typeahead": "^0.2.0",
     "rimraf": "^2.6.2",
     "ts-jest": "^23.10.5",
     "tslint": "^5.11.0",
