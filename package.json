@@ -37,6 +37,10 @@
     "watchPlugins": [
       "jest-watch-typeahead/filename",
       "jest-watch-typeahead/testname"
+    ],
+    "automock": false,
+    "setupFiles": [
+      "./src/setupTests.ts"
     ]
   },
   "repository": {
@@ -57,9 +61,11 @@
   "homepage": "https://github.com/jedmao/typescript-guide#readme",
   "devDependencies": {
     "@jedmao/tsconfig": "^0.3.0",
-    "@jedmao/tslint": "^0.2.0",
+    "@jedmao/tslint": "^0.3.0",
     "@types/jest": "^23.3.10",
+    "@types/node": "^10.12.18",
     "jest": "^23.6.0",
+    "jest-fetch-mock": "^2.1.0",
     "jest-watch-typeahead": "^0.2.0",
     "rimraf": "^2.6.2",
     "ts-jest": "^23.10.5",

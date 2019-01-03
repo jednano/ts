@@ -1,9 +1,15 @@
 {
   "extends": "@jedmao/tsconfig",
   "compilerOptions": {
+    "alwaysStrict": false,
     "outDir": "dist",
+    "target": "es2015",
   },
   "include": [
     "src/**/*.ts",
+  ],
+  "exclude": [
+    "src/setupTests.ts",
+    "src/**/*.test.ts",
   ],
 }
