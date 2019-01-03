@@ -2,6 +2,18 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Current TS File",
+      "type": "node",
+      "request": "launch",
+      "args": [
+        "${file}",
+      ],
+      "runtimeArgs": [
+        "-r",
+        "ts-node/register",
+      ],
+    },
+    {
       "type": "node",
       "name": "vscode-jest-tests",
       "request": "launch",
