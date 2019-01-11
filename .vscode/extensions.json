@@ -1,8 +1,9 @@
 {
-	"recommendations": [
+  "recommendations": [
     "editorconfig.editorconfig",
     "eg2.tslint",
+    "esbenp.prettier-vscode",
     "orta.vscode-jest",
-    "tlent.jest-snapshot-language-support",
-	],
+    "tlent.jest-snapshot-language-support"
+  ]
 }
