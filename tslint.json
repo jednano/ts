@@ -1,13 +1,6 @@
 {
-  "extends": [
-    "@jedmao/tslint"
-  ],
+  "extends": ["@jedmao/tslint"],
   "rules": {
-    "object-literal-sort-keys": false,
-    "semicolon": [
-      true,
-      "never",
-      "ignore-interfaces"
-    ]
+    "object-literal-sort-keys": false
   }
 }
