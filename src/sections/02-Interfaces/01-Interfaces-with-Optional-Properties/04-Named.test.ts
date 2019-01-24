@@ -1,3 +1,4 @@
+/* eslint-env node, jest */
 import { addToCart, CartItemToAdd } from './03-Named'
 
 describe('addToCart', () => {

@@ -1,4 +1,7 @@
 {
+  "files.associations": {
+    ".eslintrc.json": "jsonc"
+  },
   "search.exclude": {
     "**/node_modules": true,
     "**/dist": true,
@@ -7,8 +10,5 @@
   "typescript.referencesCodeLens.enabled": true,
   "tslint.ignoreDefinitionFiles": false,
   "tslint.autoFixOnSave": true,
-  "tslint.exclude": [
-    "**/dist/**/*",
-    "**/node_modules/**/*",
-  ],
+  "tslint.exclude": ["**/dist/**/*", "**/node_modules/**/*"]
 }
