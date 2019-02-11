@@ -5,7 +5,7 @@
   "description": "A TypeScript starter project.",
   "main": "dist/index.js",
   "scripts": {
-    "clean": "rimraf coverage dist *.log* bem-join-*",
+    "clean": "rimraf coverage dist *.log* ts-*",
     "codecov": "codecov -f coverage/lcov.info",
     "lint": "eslint src/**/*.ts",
     "prebuild": "rimraf dist",
