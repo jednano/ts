@@ -1,6 +1,6 @@
 *.log
 npm-debug.log*
-typescript-guide-*
+ts-*
 coverage
 node_modules/
 dist/
