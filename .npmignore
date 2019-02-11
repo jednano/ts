@@ -1,6 +1,6 @@
 node_modules/
 coverage/
-typescript-guide-*
+ts-*
 .travis.yml
 *.ts
 !*.d.ts
