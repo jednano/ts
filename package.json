@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "description": "A TypeScript starter project.",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "clean": "rimraf coverage dist *.log* ts-*",
     "codecov": "codecov -f coverage/lcov.info",
