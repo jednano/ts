@@ -1,4 +1,4 @@
-# [ts]
+# ts
 
 [![Travis Build Status](https://img.shields.io/travis/jedmao/ts.svg)](https://travis-ci.org/jedmao/ts)
 [![codecov](https://codecov.io/gh/jedmao/ts/branch/master/graph/badge.svg)](https://codecov.io/gh/jedmao/ts)
@@ -7,4 +7,4 @@
 
 A [TypeScript][] starter project.
 
-[typescript]: http://www.typescriptlang.org/index.html
+[TypeScript]: http://www.typescriptlang.org/index.html
