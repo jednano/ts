@@ -1,19 +1,13 @@
 {
-  "name": "generator-node-ts",
+  "name": "<%= appname %>",
   "version": "0.1.0",
-  "description": "A Node.js / TypeScript generator.",
-  "files": [
-    "generators"
-  ],
-  "keywords": [
-    "yeoman-generator",
-    "node",
-    "typescript"
-  ],
+  "description": "<%= appdescription %>",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "clean": "rimraf coverage dist *.log*",
+    "clean": "rimraf coverage dist *.log* <%= appname %>-*",
     "codecov": "codecov -f coverage/lcov.info",
-    "lint": "eslint generators/**/*.ts",
+    "lint": "eslint src/**/*.ts",
     "prebuild": "rimraf dist",
     "build": "tsc",
     "precover": "rimraf coverage",
@@ -63,28 +57,15 @@
       "jest-watch-typeahead/testname"
     ]
   },
-  "dependencies": {
-    "yeoman-generator": "^3.2.0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/<%= githubname %>/<%= appname %>.git"
   },
-  "devDependencies": {
-    "@jedmao/tsconfig": "^0.3.0",
-    "@types/jest": "^24.0.6",
-    "@types/node": "^11.9.4",
-    "@types/yeoman-assert": "^3.1.1",
-    "@types/yeoman-generator": "^3.0.2",
-    "@types/yeoman-test": "^2.0.1",
-    "@typescript-eslint/eslint-plugin": "^1.3.0",
-    "@typescript-eslint/parser": "^1.3.0",
-    "eslint": "^5.14.0",
-    "eslint-config-prettier": "^4.0.0",
-    "husky": "^1.3.1",
-    "jest": "^24.1.0",
-    "lint-staged": "^8.1.4",
-    "prettier": "^1.16.4",
-    "rimraf": "^2.6.3",
-    "ts-jest": "^23.10.5",
-    "typescript": "^3.3.3",
-    "yeoman-assert": "^3.1.1",
-    "yeoman-test": "^1.9.1"
-  }
+  "keywords": [<%= keywords %>],
+  "author": "<%= author %>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/<%= githubname %>/<%= appname %>/issues"
+  },
+  "homepage": "https://github.com/<%= githubname %>/<%= appname %>#readme"
 }

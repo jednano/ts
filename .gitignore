@@ -1,6 +1,1 @@
-*.log
-npm-debug.log*
-ts-*
-coverage
 node_modules/
-dist/

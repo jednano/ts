@@ -4,6 +4,8 @@
     ".eslintrc.json": "jsonc"
   },
   "search.exclude": {
-    "**/node_modules": true
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/coverge": true
   }
 }
