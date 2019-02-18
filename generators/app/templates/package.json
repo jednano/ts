@@ -1,18 +1,17 @@
 {
-  "name": "<%= appname %>",
-  "version": "0.1.0",
-  "description": "<%= appdescription %>",
+  "name": "<%= npmPath %>",
+  "version": "1.0.0",
+  "description": "<%= description %>",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "clean": "rimraf coverage dist *.log* <%= appname %>-*",
+    "clean": "rimraf coverage dist *.log* <%= githubUsername %>-<%= appname %>-*",
     "codecov": "codecov -f coverage/lcov.info",
     "lint": "eslint src/**/*.ts",
     "prebuild": "rimraf dist",
     "build": "tsc",
     "precover": "rimraf coverage",
     "cover": "jest --coverage",
-    "pretest": "npm run lint",
     "test": "jest --watch",
     "prepublishOnly": "npm run lint && npm run cover && npm run build"
   },
@@ -33,7 +32,20 @@
     "arrowParens": "avoid",
     "semi": false,
     "singleQuote": true,
-    "trailingComma": "all"
+    "trailingComma": "all",
+    "overrides": [
+      {
+        "files": [
+          "*.json",
+          "*.md",
+          "*.yml"
+        ],
+        "options": {
+          "useTabs": false,
+          "tabWidth": 2
+        }
+      }
+    ]
   },
   "jest": {
     "preset": "ts-jest",
@@ -59,13 +71,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/<%= githubname %>/<%= appname %>.git"
+    "url": "git+https://github.com/<%= githubUsername %>/<%= appname %>.git"
   },
-  "keywords": [<%= keywords %>],
-  "author": "<%= author %>",
-  "license": "MIT",
+  "keywords": <%- JSON.stringify(keywords) %>,
+  "author": "<%= gitName %> <<%= gitEmail %>>",
+  "license": "<%= license %>",
   "bugs": {
-    "url": "https://github.com/<%= githubname %>/<%= appname %>/issues"
+    "url": "https://github.com/<%= githubUsername %>/<%= appname %>/issues"
   },
-  "homepage": "https://github.com/<%= githubname %>/<%= appname %>#readme"
+  "homepage": "https://github.com/<%= githubUsername %>/<%= appname %>#readme"
 }

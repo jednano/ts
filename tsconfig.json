@@ -1,0 +1,13 @@
+{
+  "extends": "@jedmao/tsconfig",
+  "compilerOptions": {
+    "declaration": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "generators",
+    "rootDir": "src",
+    "target": "esnext"
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["src/**/*.test.ts"]
+}

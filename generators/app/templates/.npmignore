@@ -1,7 +1,7 @@
 node_modules/
 coverage/
-<%= appname %>-*
-.travis.yml
+<%= githubUsername %>-<%= appname %>-*
+.*
 *.ts
 !*.d.ts
 ts*.json
